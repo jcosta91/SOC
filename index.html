@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+
+<link rel="stylesheet" type="text/css" href="index.css">
+
+
+
+<body>
+
+  <div class="tiles_container" id="leftbox">
+    <div class="tiles first">
+      <div class="hexagon f_h_1 ocean_color"><p>2:1 Wood</p></div>
+      <div class="hexagon f_h_2"></div>
+      <div class="hexagon f_h_3"><p>3:1 wood</p></div>
+      <div class="hexagon f_h_4"></div>
+    </div>
+    
+    <div class="tiles second">
+      <div class="hexagon se_h_1"><p>3:1 sheep</p></div>
+      <div class="hexagon_s_1 se_h_2"><p></p></div>
+      <div class="hexagon se_h_3"><p></p></div>
+      <div class="hexagon se_h_4"><p></p></div>
+      <div class="hexagon se_h_5"><p></p></div>
+    </div>
+    
+    <div class="tiles third">
+      <div class="hexagon t_h_1"><p></p></div>
+      <div class="hexagon t_h_2"><p></p></div>
+      <div class="hexagon t_h_3"><p></p></div>
+      <div class="hexagon t_h_4"><p></p></div>
+      <div class="hexagon t_h_5"><p></p></div>
+      <div class="hexagon t_h_6"><p>3:1 brick</p></div>
+    </div>
+    
+    <div class="tiles fourth">
+      <div class="hexagon fo_h_1"><p>3:1 sheep</p></div>
+      <div class="hexagon fo_h_2"><p></p></div>
+      <div class="hexagon fo_h_3"><p></p></div>
+      <div class="hexagon fo_h_4"><p></p></div>
+      <div class="hexagon fo_h_5"><p></p></div>
+      <div class="hexagon fo_h_6"><p></p></div>
+      <div class="hexagon fo_h_7"><p></p></div>
+    </div>
+
+    <div class="tiles fifth">
+      <div class="hexagon fi_h_1"><p></p></div>
+      <div class="hexagon fi_h_2"><p></p></div>
+      <div class="hexagon fi_h_3"><p></p></div>
+      <div class="hexagon fi_h_4"><p></p></div>
+      <div class="hexagon fi_h_5"><p></p></div>
+      <div class="hexagon fi_h_6"><p>3:1 brick</p></div>
+    </div>
+    
+    <div class="tiles sixth">
+      <div class="hexagon si_h_1"><p>2:1 any</p></div>
+      <div class="hexagon si_h_2"><p></p></div>
+      <div class="hexagon si_h_3"><p></p></div>
+      <div class="hexagon si_h_4"><p></p></div>
+      <div class="hexagon si_h_5"><p></p></div>
+    </div>
+
+    <div class="tiles seventh">
+      <div class="hexagon sev_h_1"><p></p></div>
+      <div class="hexagon sev_h_2"><p>2:1 any</p></div>
+      <div class="hexagon sev_h_3"><p></p></div>
+      <div class="hexagon sev_h_4"><p>3:1 wood</p></div>
+    </div>
+  </div>
+
+
+<div class="player1Res">
+  <div id="mydiv">
+    <div id="mydivheader">R</div>
+  </div>
+
+  <div id="mydi">
+    <div id="mydiheader">R</div>
+  </div>
+
+  <div id="myd">
+    <div id="mydheader">R</div>
+  </div>
+</div>
+
+<div class="player2Res">
+
+  <div id="p2div">
+    <div id="p2divheader">R</div>
+  </div>
+<!--
+  <div id="mydi">
+    <div id="mydiheader">Rd</div>
+  </div>
+
+  <div id="myd">
+    <div id="mydheader">Rd</div>
+  </div>
+-->
+</div>
+
+<div class="player3Res">
+  <div id="p3div">
+    <div id="p3divheader">R</div>
+  </div>
+<!--
+  <div id="mydi">
+    <div id="mydiheader">Rd</div>
+  </div>
+
+  <div id="myd">
+    <div id="mydheader">Rd</div>
+  </div>
+-->
+</div>
+
+<div class="player4Res">
+  <div id="p4div">
+    <div id="p4divheader">R</div>
+  </div>
+<!--
+
+  <div id="mydi">
+    <div id="mydiheader">Rd</div>
+  </div>
+
+  <div id="myd">
+    <div id="mydheader">Rd</div>
+  </div>
+-->
+</div>
+
+
+
+<div class="diceRollSection">
+
+<script type="text/javascript">
+
+
+  //class section
+  class rollDiceClass {
+    constructor(dice1, dice2) {
+      this.dice1 = Math.floor((Math.random()*6) + 1);
+      this.dice2 = Math.floor((Math.random()*6) + 1);
+
+    }
+  }
+
+  function rollDice(){
+    /*
+     var roll = new rollDiceClass(document.getElementById("p1").innerHTML, document.getElementById("p2").innerHTML)
+     */
+
+    document.getElementById("p1").innerHTML = Math.floor((Math.random()*6) + 1);
+    document.getElementById("p2").innerHTML = Math.floor((Math.random()*6) + 1);
+    
+  }
+</script>
+
+  <button type="button" onclick="rollDice()">Roll Dice</button>
+
+  <p id="p1">0</p>
+  <p id="p2">0</p>
+
+</div>
+
+
+<div class="playersSection">
+
+  <div class="player1">
+    <p>player 1</p>
+    <li>sheep: ?</li><br>
+    <li>wood: ?</li><br>
+    <li>Ore: ?</li><br>
+    <li>Brick: ?</li><br>
+    <li>Wheat: ?</li><br>
+    <li>Hand Total: ?</li><br>
+  </div>
+
+  <div class="player2">
+    <p>player 2</p>
+    <li>sheep: ?</li><br>
+    <li>wood: ?</li><br>
+    <li>Ore: ?</li><br>
+    <li>Brick: ?</li><br>
+    <li>Wheat: ?</li><br>
+    <li>Hand Total: ?</li><br>
+  </div>
+
+  <div class="player3">
+    <p>player 3</p>
+    <li>sheep: ?</li><br>
+    <li>wood: ?</li><br>
+    <li>Ore: ?</li><br>
+    <li>Brick: ?</li><br>
+    <li>Wheat: ?</li><br>
+    <li>Hand Total: ?</li><br>
+  </div>
+
+  <div class="player4">
+    <p>player 4</p>
+    <li>sheep: ?</li><br>
+    <li>wood: ?</li><br>
+    <li>Ore: ?</li><br>
+    <li>Brick: ?</li><br>
+    <li>Wheat: ?</li><br>
+    <li>Hand Total: ?</li><br>
+  </div>
+  
+</div>
+
+<script>
+//Make the DIV element draggagle:p2div
+dragElement(document.getElementById("mydiv"));
+
+dragElement(document.getElementById("mydi"));
+
+dragElement(document.getElementById("myd"));
+
+dragElement(document.getElementById("p2div"));
+
+dragElement(document.getElementById("p3div"));
+
+dragElement(document.getElementById("p4div"));
+
+
+
+
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "header")) {
+    /* if present, the header is where you move the DIV from:*/
+    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+  } else {
+    /* otherwise, move the DIV from anywhere inside the DIV:*/
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    /* stop moving when mouse button is released:*/
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+
+
+class players {
+  constructor(player1, player2, player3, player4) {
+
+  }
+}
+
+class accruedRes {
+  constructor() {
+
+  }
+}
+
+class resourcesClass {
+  constructor() {
+
+  }
+}
+
+
+  
+
+}
+</script>
+<script src="index.js"></script>
+</body>
+</html>
